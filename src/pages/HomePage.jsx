@@ -320,7 +320,7 @@ const HomePage = () => {
     { 
       icon: <ChatBubbleLeftRightIcon className="w-10 h-10 text-blue-500" />, 
       title: "Conversational AI", 
-      description: "Ask financial questions naturally and get intelligent insights.",
+      description: "and get intelligent insights.",
       link: '/chatbot',
       delay: 0.1
     },
