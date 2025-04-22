@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* A3 size in mm: 297mm x 420mm */
+        body {
+            margin: 0;
+            padding: 0;
+            width: 297mm;
+            height: 420mm;
+            background: linear-gradient(135deg, #1a1a35 0%, #2d1a4e 100%);
+            color: white;
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .poster {
+            width: 100%;
+            height: 100%;
+            padding: 20mm;
+            box-sizing: border-box;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 15mm;
+        }
+        
+        h1 {
+            font-size: 48pt;
+            margin: 0;
+            background: linear-gradient(90deg, #6573ff, #ae5cdb, #ff6ec7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            line-height: 1.2;
+            letter-spacing: 1px;
+        }
+        
+        h2 {
+            font-size: 22pt;
+            margin: 0;
+            font-weight: 300;
+            color: #b3a0ff;
+        }
+        
+        .presenter {
+            font-size: 16pt;
+            margin-top: 10mm;
+            color: #d1c4ff;
+        }
+        
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 15mm;
+            margin-bottom: 15mm;
+        }
+        
+        .section {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10mm;
+            padding: 8mm;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .full-width {
+            grid-column: 1 / span 2;
+        }
+        
+        .section-title {
+            font-size: 20pt;
+            margin-top: 0;
+            margin-bottom: 5mm;
+            color: #ae5cdb;
+            display: flex;
+            align-items: center;
+        }
+        
+        .section-title::before {
+            content: "";
+            display: inline-block;
+            width: 5mm;
+            height: 5mm;
+            margin-right: 3mm;
+            background: linear-gradient(90deg, #6573ff, #ae5cdb);
+            border-radius: 50%;
+        }
+        
+        .section-content {
+            font-size: 14pt;
+            line-height: 1.5;
+        }
+        
+        .highlights {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15mm;
+        }
+        
+        .highlight-box {
+            background: rgba(174, 92, 219, 0.2);
+            border-radius: 5mm;
+            padding: 5mm;
+            width: 30%;
+            text-align: center;
+            border: 1px solid rgba(174, 92, 219, 0.3);
+        }
+        
+        .highlight-number {
+            font-size: 36pt;
+            font-weight: bold;
+            margin: 0;
+            background: linear-gradient(90deg, #6573ff, #ff6ec7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .highlight-text {
+            font-size: 12pt;
+            margin-top: 2mm;
+        }
+        
+        .footer {
+            text-align: center;
+            font-size: 12pt;
+            margin-top: 10mm;
+            color: #b3a0ff;
+        }
+        
+        .decorative-circle {
+            position: absolute;
+            border-radius: 50%;
+            opacity: 0.1;
+            z-index: -1;
+        }
+        
+        #circle1 {
+            width: 200mm;
+            height: 200mm;
+            top: -100mm;
+            right: -50mm;
+            background: radial-gradient(circle, #ff6ec7, transparent);
+        }
+        
+        #circle2 {
+            width: 150mm;
+            height: 150mm;
+            bottom: -50mm;
+            left: -50mm;
+            background: radial-gradient(circle, #6573ff, transparent);
+        }
+    </style>
+</head>
+<body>
+    <div class="decorative-circle" id="circle1"></div>
+    <div class="decorative-circle" id="circle2"></div>
+    
+    <div class="poster">
+        <div class="header">
+            <h1>SelectifyAI</h1>
+            <h2>AI-Powered Resume Screening & Ranking Platform</h2>
+            <div class="presenter">Your Name | Department of Computer Science</div>
+        </div>
+        
+        <div class="content">
+            <div class="section full-width">
+                <h3 class="section-title">Problem Statement</h3>
+                <div class="section-content">
+                    The recruitment process is often delayed due to the time-consuming task of screening and shortlisting resumes manually. This not only increases the cost of hiring but may also lead to missing out on top talent. Human bias can affect candidate selection, resulting in potentially unfair hiring practices and missed opportunities for diversity.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Our Solution</h3>
+                <div class="section-content">
+                    SelectifyAI is an AI-powered resume screening and ranking platform designed to streamline recruitment by automating candidate evaluation. It supports batch processing of up to 100 resumes in formats like PDF and DOCX, and uses a hybrid method combining semantic and keyword analysis to achieve about 85% matching accuracy. The system ranks candidates based on relevance, offering data-driven shortlists and reducing manual effort.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Technology Stack</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>Natural Language Processing (NLP) using RoBERTa</li>
+                        <li>Machine Learning algorithms for candidate ranking</li>
+                        <li>Python backend with Flask API</li>
+                        <li>React.js frontend with responsive design</li>
+                        <li>MongoDB for resume data storage</li>
+                        <li>Docker containerization for scalable deployment</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Key Features</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>Automated resume parsing and information extraction</li>
+                        <li>Customizable job requirement matching</li>
+                        <li>Bias reduction through objective evaluation criteria</li>
+                        <li>Candidate scoring and intelligent ranking system</li>
+                        <li>Batch processing capability (up to 100 resumes)</li>
+                        <li>Detailed analytics and recruitment insights</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Methodology</h3>
+                <div class="section-content">
+                    Our platform implements a three-stage approach:
+                    <ol>
+                        <li><strong>Document Processing:</strong> Extract text from multiple document formats and normalize content</li>
+                        <li><strong>Semantic Analysis:</strong> Use RoBERTa language model to understand context beyond keywords</li>
+                        <li><strong>Intelligent Ranking:</strong> Apply weighted scoring algorithm based on job requirements</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3 class="section-title">Benefits & Impact</h3>
+                <div class="section-content">
+                    <ul>
+                        <li>70% reduction in screening time</li>
+                        <li>Improved quality of shortlisted candidates</li>
+                        <li>Reduced unconscious bias in candidate selection</li>
+                        <li>Data-driven recruitment decisions</li>
+                        <li>Cost efficiency in hiring process</li>
+                        <li>Scalable solution for organizations of all sizes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="highlights">
+            <div class="highlight-box">
+                <p class="highlight-number">85%</p>
+                <p class="highlight-text">Matching Accuracy</p>
+            </div>
+            <div class="highlight-box">
+                <p class="highlight-number">70%</p>
+                <p class="highlight-text">Time Saved</p>
+            </div>
+            <div class="highlight-box">
+                <p class="highlight-number">100+</p>
+                <p class="highlight-text">Resumes Processed</p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <p>© 2025 SelectifyAI | Department of Computer Science | Your University Name</p>
+        </div>
+    </div>
+</body>
+</html>

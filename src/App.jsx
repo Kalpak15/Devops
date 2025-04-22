@@ -14,6 +14,7 @@ import Header from './components/Header';
 import InvestmentGuidancePage from "./pages/InvestmentGuidence";
 import FinancialLiteracyPage from "./pages/FinancialLiteracy";
 import SecurityPage from "./pages/Security";
+import Login from "./pages/Login"
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,7 @@ function App() {
         <Route path="/investment-guidence" element={<InvestmentGuidancePage />} />
         <Route path="/financial-literacy" element={<FinancialLiteracyPage />} />
         <Route path="/security" element={<SecurityPage />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
       <ToastContainer position="top-right" autoClose={3000} hideProgressBar />
     </>
