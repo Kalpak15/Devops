@@ -319,7 +319,7 @@ const HomePage = () => {
   const features = [
     { 
       icon: <ChatBubbleLeftRightIcon className="w-10 h-10 text-blue-500" />, 
-      title: "Conversational AI", 
+      title: "Conversational AIII", 
       description: "and get intelligent insights.",
       link: '/chatbot',
       delay: 0.1
