@@ -64,3 +64,4 @@ test('logs email and password on login click', () => {
   expect(console.log).toHaveBeenCalledWith('Email:', 'test@example.com');
   expect(console.log).toHaveBeenCalledWith('Password:', 'test123');
 });
+

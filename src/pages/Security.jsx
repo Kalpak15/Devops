@@ -17,7 +17,7 @@ const SecurityPage = () => {
     },
     {
       icon: <FingerPrintIcon className="w-10 h-10 text-blue-500" />,
-      title: "Biometric Authentication",
+      title: "Biometric",
       description: "Multi-factor authentication with biometric verification ensures only you can access your account."
     },
     {
